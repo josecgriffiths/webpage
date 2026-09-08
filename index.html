@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joseph Griffiths — Lecturer, Systems Programming Creator, Founder of OrbitGeo</title>
+<meta name="description" content="Joseph Griffiths — university lecturer, low-level systems programming YouTube creator, and company director of OrbitGeo." />
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="#top" class="brand">JG<span class="brand-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#orbitgeo">OrbitGeo</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-text reveal">
+      <p class="eyebrow">Lecturer &middot; Systems Programming &middot; Founder</p>
+      <h1>Joseph Griffiths</h1>
+      <p class="hero-sub">
+        I teach low-level programming, break down how computers really work on
+        YouTube, and lead <strong>OrbitGeo</strong> as company director — building
+        geospatial technology.
+      </p>
+      <div class="hero-actions">
+        <a href="#content" class="btn btn-primary">Watch the Content</a>
+        <a href="#orbitgeo" class="btn btn-ghost">Explore OrbitGeo</a>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">C</span>
+        <span class="tag">Systems Programming</span>
+        <span class="tag">Linux / Unix</span>
+        <span class="tag">Compilers</span>
+        <span class="tag">Geospatial</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="terminal-title">joseph@lowlevel: ~</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="out">joseph_griffiths</p>
+          <p><span class="prompt">$</span> cat roles.txt</p>
+          <p class="out">- University Lecturer</p>
+          <p class="out">- YouTube Creator, Low-Level Programming</p>
+          <p class="out">- Director, OrbitGeo</p>
+          <p><span class="prompt">$</span> gcc -Wall -Wextra -O2 mindset.c -o growth</p>
+          <p><span class="prompt">$</span> ./growth</p>
+          <p class="out typing">Compiling knowledge, one byte at a time<span class="cursor">_</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container">
+    <div class="section-head reveal">
+      <p class="eyebrow">About</p>
+      <h2>Three roles, one obsession: understanding systems deeply</h2>
+    </div>
+
+    <div class="about-grid">
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true">🎓</div>
+        <h3>Lecturer</h3>
+        <p>
+          I teach students the foundations of computing — from memory and
+          execution to compilation and operating systems — with an emphasis on
+          building correct mental models, not just passing exams.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true">📹</div>
+        <h3>YouTube Creator</h3>
+        <p>
+          My channel focuses on low-level and systems programming: C,
+          pointers, memory layout, debugging, compilers, and the Linux/Unix
+          tooling that powers it all — explained clearly, from first
+          principles.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true">🛰️</div>
+        <h3>Company Director</h3>
+        <p>
+          I lead <strong>OrbitGeo</strong>, a geospatial technology company,
+          applying the same rigor and low-level performance mindset to
+          real-world spatial data problems.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTENT / YOUTUBE -->
+  <section id="content" class="section container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Content</p>
+      <h2>Low-level programming, explained clearly</h2>
+      <p class="section-sub">
+        Videos on C, memory, compilers, and the Linux/Unix internals that most
+        tutorials skip over.
+      </p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card reveal">
+        <div class="video-thumb">
+          <span class="play-icon" aria-hidden="true">▶</span>
+        </div>
+        <h3>Understanding Pointers from First Principles</h3>
+        <p>What a pointer actually is in memory, and why beginners get it wrong.</p>
+      </article>
+
+      <article class="video-card reveal">
+        <div class="video-thumb">
+          <span class="play-icon" aria-hidden="true">▶</span>
+        </div>
+        <h3>Stack vs Heap, Visually Explained</h3>
+        <p>Tracing allocation and lifetime through a real C program.</p>
+      </article>
+
+      <article class="video-card reveal">
+        <div class="video-thumb">
+          <span class="play-icon" aria-hidden="true">▶</span>
+        </div>
+        <h3>What Actually Happens When You Run gcc</h3>
+        <p>Preprocessing, compiling, assembling, and linking — step by step.</p>
+      </article>
+    </div>
+
+    <div class="content-cta reveal">
+      <a href="#" class="btn btn-primary" id="youtubeLink">Subscribe on YouTube</a>
+    </div>
+  </section>
+
+  <!-- ORBITGEO -->
+  <section id="orbitgeo" class="section container">
+    <div class="orbit-panel reveal">
+      <div class="orbit-text">
+        <p class="eyebrow">Company</p>
+        <h2>OrbitGeo</h2>
+        <p>
+          OrbitGeo is a geospatial technology company I direct, focused on
+          turning complex spatial data into tools people can actually use.
+          It's where my systems-level engineering background meets
+          real-world geography and infrastructure problems.
+        </p>
+        <a href="#" class="btn btn-ghost" id="orbitgeoLink">Visit OrbitGeo →</a>
+      </div>
+      <div class="orbit-visual" aria-hidden="true">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <div class="orbit-core"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's connect</h2>
+      <p class="section-sub">
+        Reach out about teaching, collaborations, content, or OrbitGeo.
+      </p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <a href="mailto:hello@example.com" class="contact-card">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">hello@example.com</span>
+      </a>
+      <a href="#" class="contact-card">
+        <span class="contact-label">YouTube</span>
+        <span class="contact-value">@josephgriffiths</span>
+      </a>
+      <a href="#" class="contact-card">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">github.com/josecgriffiths</span>
+      </a>
+      <a href="#" class="contact-card">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">in/josephgriffiths</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Joseph Griffiths. All rights reserved.</p>
+    <p class="footer-sub">Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
