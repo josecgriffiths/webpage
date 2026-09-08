@@ -225,54 +225,43 @@ a { color: inherit; text-decoration: none; }
   background: var(--bg-elevated);
 }
 
-/* Terminal */
-.terminal {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
+/* Portrait */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.portrait-frame {
+  width: min(100%, 380px);
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   overflow: hidden;
-  transform: perspective(1000px) rotateY(-6deg) rotateX(2deg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--bg-elevated);
+  position: relative;
+  transform: perspective(1000px) rotateY(-4deg);
   transition: transform 0.4s ease;
 }
 
-.terminal:hover {
-  transform: perspective(1000px) rotateY(-2deg) rotateX(0deg);
+.portrait-frame:hover {
+  transform: perspective(1000px) rotateY(0deg);
 }
 
-.terminal-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 16px;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.35));
+  pointer-events: none;
 }
 
-.dot { width: 11px; height: 11px; border-radius: 50%; }
-.dot-red { background: #ff5f56; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green { background: #27c93f; }
-
-.terminal-title {
-  margin-left: 10px;
-  font-size: 0.8rem;
-  color: var(--text-faint);
-  font-family: "SF Mono", Menlo, Consolas, monospace;
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-
-.terminal-body {
-  padding: 22px;
-  font-family: "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.9rem;
-}
-
-.terminal-body p { margin-bottom: 10px; }
-.prompt { color: var(--accent); margin-right: 8px; }
-.out { color: var(--text-muted); padding-left: 18px; }
-.cursor { animation: blink 1s step-start infinite; color: var(--accent); }
-
-@keyframes blink { 50% { opacity: 0; } }
 
 /* ---------- Sections ---------- */
 .section { padding: 100px 24px; }
@@ -336,7 +325,13 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 40px;
 }
 
+.video-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+}
+
 .video-card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
