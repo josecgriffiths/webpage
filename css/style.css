@@ -196,6 +196,15 @@ a { color: inherit; text-decoration: none; }
   -webkit-text-fill-color: transparent;
 }
 
+.hero-credentials {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
 .hero-sub {
   font-size: 1.15rem;
   color: var(--text-muted);
