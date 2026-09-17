@@ -485,7 +485,7 @@ a { color: inherit; text-decoration: none; }
 /* Contact */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -539,7 +539,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--text-faint);
 }
 
-.contact-value { font-weight: 600; font-size: 0.98rem; word-break: break-word; }
+.contact-value {
+  font-weight: 600;
+  font-size: 0.98rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* Footer */
 .site-footer {
