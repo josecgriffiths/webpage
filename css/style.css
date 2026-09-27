@@ -361,6 +361,65 @@ a { color: inherit; text-decoration: none; }
 .card h3 { font-size: 1.2rem; margin-bottom: 12px; font-weight: 700; }
 .card p { color: var(--text-muted); font-size: 0.98rem; }
 
+/* Press grid */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.press-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.press-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow);
+}
+
+.press-tag {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.press-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.press-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.press-link {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.press-card:hover .press-link { color: var(--accent); }
+
 /* OrbitGeo panel */
 .orbit-panel {
   display: grid;
@@ -563,7 +622,7 @@ a { color: inherit; text-decoration: none; }
   .hero { grid-template-columns: 1fr; padding-top: 56px; text-align: left; }
   .hero-visual { order: -1; }
   .terminal { transform: none; }
-  .about-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid, .press-grid { grid-template-columns: 1fr 1fr; }
   .orbit-panel { grid-template-columns: 1fr; padding: 36px; }
   .contact-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
@@ -583,7 +642,7 @@ a { color: inherit; text-decoration: none; }
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-grid, .contact-grid, .press-grid { grid-template-columns: 1fr; }
   .section { padding: 64px 20px; }
   .hero { padding-bottom: 64px; }
 }
