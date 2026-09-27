@@ -293,8 +293,9 @@ a { color: inherit; text-decoration: none; }
 /* About cards */
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  max-width: 800px;
 }
 
 .card {
@@ -358,94 +359,6 @@ a { color: inherit; text-decoration: none; }
 
 .card h3 { font-size: 1.2rem; margin-bottom: 12px; font-weight: 700; }
 .card p { color: var(--text-muted); font-size: 0.98rem; }
-
-/* Video grid */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 40px;
-}
-
-.video-grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.video-card {
-  display: block;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.video-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
-}
-
-.video-thumb {
-  aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
-}
-
-.video-thumb img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.video-card:hover .video-thumb img { transform: scale(1.06); }
-
-.video-thumb::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.55));
-  z-index: 1;
-}
-
-.play-icon {
-  position: relative;
-  z-index: 2;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  transition: transform 0.2s ease;
-}
-
-.video-card:hover .play-icon { transform: scale(1.1); }
-
-.video-card h3 {
-  font-size: 1.05rem;
-  padding: 20px 20px 8px;
-  font-weight: 700;
-}
-
-.video-card p {
-  padding: 0 20px 20px;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-}
-
-.content-cta { text-align: center; }
 
 /* OrbitGeo panel */
 .orbit-panel {
@@ -555,7 +468,7 @@ a { color: inherit; text-decoration: none; }
 /* Contact */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -649,9 +562,9 @@ a { color: inherit; text-decoration: none; }
   .hero { grid-template-columns: 1fr; padding-top: 56px; text-align: left; }
   .hero-visual { order: -1; }
   .terminal { transform: none; }
-  .about-grid, .video-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr 1fr; max-width: none; }
   .orbit-panel { grid-template-columns: 1fr; padding: 36px; }
-  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -669,7 +582,7 @@ a { color: inherit; text-decoration: none; }
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
-  .about-grid, .video-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .section { padding: 64px 20px; }
   .hero { padding-bottom: 64px; }
 }
