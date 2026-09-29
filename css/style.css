@@ -337,6 +337,9 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
+.card-photo .card-media-code { background: #1e1f2b; }
+.card-photo .card-media-code img { object-position: left top; }
+
 .card-media-logo {
   display: flex;
   align-items: center;
@@ -355,8 +358,6 @@ a { color: inherit; text-decoration: none; }
 .card-media-light {
   background: #ffffff;
 }
-
-.code-icon { color: var(--accent); }
 
 .card h3 { font-size: 1.2rem; margin-bottom: 12px; font-weight: 700; }
 .card p { color: var(--text-muted); font-size: 0.98rem; }
