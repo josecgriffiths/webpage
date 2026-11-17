@@ -36,10 +36,11 @@ revealEls.forEach((el) => observer.observe(el));
 
 // Header shadow on scroll
 const header = document.querySelector(".site-header");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 8) {
-    header.style.borderBottomColor = "var(--border-hover)";
-  } else {
-    header.style.borderBottomColor = "var(--border)";
-  }
-});
+window.addEventListener(
+  "scroll",
+  () => {
+    header.style.borderBottomColor =
+      window.scrollY > 8 ? "var(--border-hover)" : "var(--border)";
+  },
+  { passive: true }
+);
